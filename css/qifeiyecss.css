@@ -656,6 +656,7 @@ float: left;
 		height: 55px;
 	}*/
 	.row{margin-top:50px;}
+	video{display:none;}
 	video{position: relative;top:55px !important;}
 	.moblie_fontsize20{font-size: 20px !important;}
 	.mobile_fontsize12{font-size: 12px !important;}
@@ -684,6 +685,7 @@ float: left;
     	position:absolute;
     	left:0px !important;
     }
+    video{display:block;}
 }
 
 /*
