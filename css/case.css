@@ -1,0 +1,181 @@
+.bomBanner{
+	height: 400px;	
+	overflow: hidden;
+}
+.bomBanner .banner-img{
+	background-image: url(../img/case.jpg);
+	background-size: 100% 100%;
+	height: 200%;
+	position: relative;
+    top:30px;
+}
+.bomBanner .caseCover{
+	background-color: rgba(48,38,38,0.2);
+}
+.bomBanner .wordCover{
+	position: relative;
+	top:150px;
+	left:60px;
+}
+.font36{
+	font-family: "微软雅黑";
+	font-size:36px;
+	color: white;
+}
+.font16{
+	line-height: 2;
+	font-size:16px;
+	font-family: "微软雅黑";
+	color: #D3D3D3;
+}
+.topBanner{
+	width: 100%; 
+	margin-top:60px;
+	display: none;
+	overflow: hidden;
+}
+.topBanner-img{
+    background-image: url(../img/works-banner-img.jpg); 
+	background-size: 100% 100%;
+	text-align: center;    
+	background-repeat: no-repeat;
+}
+.topBanner-img p,a {color: white;line-height: 1.5em;}
+.topBanner-img .caseCover{padding-top:30px;}
+.topBanner-img .caseCover>div{
+	margin: 0px 10px 40px 10px;
+}
+.topBanner-img a{
+	font-family: 幼圆;
+    font-size: 20px;
+    top: 1px;
+  
+}
+.div-regbtn{display: inline-block !important;}
+@media (max-width:767px ) {
+	 .bomBanner .wordCover{
+    	position: relative;
+    	top:10px;
+    	left:20px;
+     }
+     .bomBanner .banner-img{
+     	top: 0px !important;
+     }
+.bomBanner {height: 300px !important;}
+}  
+
+		   
+.div-works li a{
+	font-family:"微软雅黑";
+    font-size: 15px;
+    color: #5b5b5b;
+	display: inline-block;
+	padding: 12px 0;
+}
+.div-works ul>li:not(:first-child),.subnav>li:not(:first-child){
+	border-top: 1px solid #efefef;
+}
+.div-works{
+   width:90%;
+   margin: 0 auto;
+}
+.backcolor{
+	background-color: #F7F7F7;
+}
+.subnav{
+	display: none;
+}
+.subnav li a{
+	padding-left: 50px;
+}
+.div-works ul li{                     
+    background:#F7F7F7;
+    list-style: none;
+	width: 100%;
+	line-height: 50px;  /*通过行高来设置li的高度，采用height则会位置错乱*/
+	text-align: left;	
+}	
+.div-works ul li:hover{
+	background:#ededed;;
+}
+.div-works>ul{
+	 margin-top: 80px;
+}
+.works-sjx{
+	border: 8px solid;
+	border-color:transparent  transparent transparent #000;
+	width: 0;
+	display: inline-block;
+	margin:auto 5px;
+}
+.div-showworks{
+   border-left: 1px solid #E2E2E2;
+   text-align: center;
+}
+.div-showworks h4{
+  	color: #373A41;
+	font-size: 16px;
+	line-height: 18px;
+}
+.div-showworks div>div{
+	margin-top: 50px;
+}
+.div-moreworks{
+	margin: 70px auto !important;  
+	float: none !important;
+}
+.div-moreworks>a{
+	background-color: deepskyblue;
+	border-color: dodgerblue;
+	color: #fff;
+}
+
+.mini-nav{
+	width:234px ;
+	margin: 0 auto;
+	display: none;
+	margin-top: 30px !important;
+}
+.mini-nav li{
+	line-height: 45px;
+	text-align: center !important;
+	color: white;
+	background: black !important;
+}
+.mini-nav li a{
+	color: white;
+	font-family: "微软雅黑";
+    font-size: 15px;
+}
+.hide-ul>li{
+	border-top:1px solid white;
+}
+.hide-ul{
+	display: none;
+}
+@keyframes extend-Anim{
+	from{ height: 0px;opacity: 0;}
+	to{ height: 180px;opacity: 1;}
+}
+@-webkit-keyframes  extend-Anim /* Safari 与 Chrome */
+{
+    from{ height: 0px;opacity: 0;}
+	to{ height: 180px;opacity: 1;}
+}
+@keyframes shorten-Anim{
+	from{ height: 180px;}
+	to{ height: 0px;}
+}
+@-webkit-keyframes  shorten-Anim /* Safari 与 Chrome */
+{
+    from{ height: 180px;}
+	to{ height: 0px;}
+}
+.div-extend{
+	animation:  extend-Anim 2.5s ease ;
+	-webkit-animation:  extend-Anim 2.5s ease ; /* Safari and Chrome */
+}
+.div-shorten{
+	animation:  shorten-Anim 2.5s ease ;
+	-webkit-animation:  shorten-Anim 2.5s ease ; /* Safari and Chrome */
+} 
