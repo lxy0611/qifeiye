@@ -1,0 +1,43 @@
+[
+	{
+	    "type":"",
+		"title": "新森品牌设计",
+        "areas": "大陆三区",
+        "imgsrc":"img/case/新森.png"
+	},{
+	    "type":"",
+	    "title": "哆啦梦画儿童设计空间",
+        "areas": "大陆三区",
+        "imgsrc":"img/case/哆啦A梦.png"	
+	},{
+	    "type":"",
+		"title": "穆恣（上海）空间设计有限公司",
+        "areas": "大陆二区",
+        "imgsrc":"img/case/穆恣.png"
+	},{
+	   "type":"",
+	   "title": "TQ Auto Parts",
+       "areas": "香港一区",
+       "imgsrc":"img/case/TQ.png"
+    },{
+       "type":"",
+       "title": "無调性",
+       "areas": "大陆一区",
+       "imgsrc":"img/case/无调性.png"
+    },{
+       "type":"",
+       "title": "BABYMODELS",
+       "areas": "香港一区",
+       "imgsrc":"img/case/BABYMODELS.png" 
+    },{
+       "type":"",
+       "title": "cotton.cotton",
+       "areas": "香港一区",
+       "imgsrc":"img/case/cotton.png"
+    },{
+       "type":"",
+       "title": "FASHIONHOUSE",
+       "areas": "香港三区",
+       "imgsrc":"img/case/fashion.png"
+    }
+]
