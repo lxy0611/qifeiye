@@ -6,25 +6,6 @@ $(function(){
 	var i=0;
 	var mark=0;
 	var markbiao="";
-	/*setInterval(function(){
-		if(i<len){
-			if(texts[i]===">"){
-				markbiao+=texts[i];
-				$("#writeSpan").before(markbiao);
-				mark=0;
-			}
-			else if(texts[i]==="<"|| mark==1) {
-				mark=1;
-				markbiao+=texts[i];
-			}
-			else{
-			    $("#writeSpan").before(texts[i]);
-			   }
-			i++;
-		}
-	},300)*/
-	
-	
 	function  myWrite(texts){
 		if(i<len){
 			if(texts[i]===">"){
@@ -47,13 +28,14 @@ $(function(){
 		myWrite(texts);
 	},300);
 	
-	/*
+	
 	//置顶导航
-	if($(window).scroll(function(){
-		$("nav").addClass("navbar-fixed-top");
-		$("nav .navbar-right").display("none");
-	})
-	*/
+	$(".a-top").click(function () {
+        var speed=1000;//滑动的速度
+        $('body,html').animate({scrollTop: 0}, speed);
+        return false;
+    });
+	
 	//关于导航
 	$("#li-about").hover(
 		function(){
