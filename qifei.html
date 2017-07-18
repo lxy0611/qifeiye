@@ -166,7 +166,7 @@
                     <source src="img/apple_sing_child.mp4"  type="video/mp4">
                     您的浏览器不支持 HTML5 video 标签。
 				</video>
-			    <div class="mobile_show hide-img" style="width: 200%; left:-100px; top:30px;"></div>
+			    <div class="mobile_show hide-img"></div>
 			    <div class="coverDiv">
 			    	<div class="coverDiv-word mobile_hide">
 			    		<div class="coverDiv-word1">
@@ -178,9 +178,6 @@
 			    		</div>
 			    		<div class="coverDiv-word3"><a class="btn">免费创建账户</a></div>
 			    	</div>
-			    	<!--<div class="div-drop mobile_hide">
-				    	<i class="glyphicon glyphicon-chevron-down"></i>
-                    </div>-->
 				    <div class="mincoverDiv-word mobile_show">
 			    		<div class="coverDiv-word1">
 			    			<span>自己做网站</span></br><span>简单又省钱</span>
@@ -249,7 +246,7 @@
 			        	<div><a href=""></a></div>
 			        </div>
 		        </div>
-                <div class="row bgcF7 mobile_hide" style="text-align: center;">
+                <div class="row bgcF7 mobile_hide center-align">
 			        <div class="container">
 			        	<div class="col-md-12">
 			        		<p class="moblie_fontsize20 styleTitleFont" style="font-size:36px;letter-spacing: 3px;">
@@ -332,8 +329,8 @@
 		                <a class="btn" id="btn_prev"><i class="glyphicon glyphicon-chevron-right"></i></a>
 		            </div>
 		        </div>
-		        <div class="container" style="width: 90%;">
-			        <div class="row" style="text-align: center;">
+		        <div class="container div-width90">
+			        <div class="row center-align">
 			        	<div class="col-md-12">
 			        		<p class="moblie_fontsize20 styleTitleFont" style="font-size: 34px;">
 				        		<span>
@@ -354,7 +351,7 @@
 						<div class="col-md-4 col-xs-6"><a><img src="img/Jarelzhang.png" class="img-responsive"/></a></div>
 			        	<div class="col-md-4 col-xs-6"><a><img src="img/FANS.png" class="img-responsive"/></a></div>
 			        </div>
-			        <div class="mobile_hide"><a class="btn btn-primary checkbtn" style="margin: 0 auto;">查看更多案例&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></a></div>
+			        <div class="mobile_hide"><a class="btn btn-primary checkbtn" style="margin: 0 auto;" href="案例.html">查看更多案例&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></a></div>
 			    </div>
 			    <div class="div-afford">
 			    	<div class="col-md-6 col-xs-11" id="h1-anim">
@@ -366,8 +363,8 @@
 			    	</div>
 			    	<div class="col-md-6 col-xs-10"><img src="img/upfengjing.png" class="img-responsive"/></div>
 			    </div>
-		        <div class="row bgcF7" style="text-align: center;">
-			        <div class="container" style="width: 90%;">
+		        <div class="row bgcF7 center-align">
+			        <div class="container div-width90">
 			        	<div><h1 class="moblie_fontsize20 styleTitleFont" id="partner-anim">合作伙伴</h1></div>
 			        	<div class="partner-show">
 			        		<div class="col-md-3 col-xs-6">
@@ -406,8 +403,8 @@
 			        </div>	
 		        </div>
 		    </div>	    
-		    <div style="width:100%;margin: 0 auto; margin-bottom: 120px;" class="mobile_hide">
-		    	<div class="row" style="font-size: 36px; text-align: center;"><h1 id="feedback-anim">客户反馈</h1></div>
+		    <div class="mobile_hide div-feedback">
+		    	<div class="row" style="font-size: 36px;text-align: center;"><h1 id="feedback-anim">客户反馈</h1></div>
 		        <hr />
 		        <div class="carousel slide" style="height:180px !important;" id="myCarousel">
 					<!-- 轮播（Carousel）指标 -->
@@ -607,11 +604,11 @@
 	<script type="text/javascript">
 		$(function(){
 			//三图轮播
-			var pic=document.getElementsByClassName("pic");
-	    	var btn_next=document.getElementById("btn_next");
-	    	var btn_prev=document.getElementById("btn_prev");
-	    	var pics=["三图轮播1.png","三图轮播2.png","三图轮播3.png","三图轮播4.png","三图轮播5.png"];
-	    	var picmid=1;
+			let pic=document.getElementsByClassName("pic");
+	    	let btn_next=document.getElementById("btn_next");
+	    	let btn_prev=document.getElementById("btn_prev");
+	    	let pics=["三图轮播1.png","三图轮播2.png","三图轮播3.png","三图轮播4.png","三图轮播5.png"];
+	    	let picmid=1;
 	    	//函数封装
 	    	function nextPic(){
 	    		picmid--;
@@ -672,104 +669,97 @@
 				var wordfeedback=document.getElementById("feedback-anim").offsetTop;
 				var hp=document.getElementById("h1-anim").offsetTop;
 				var hp2=document.getElementById("hp2-anim").offsetTop;
-			
-		    if($(window).scrollTop()>20){
+		    
+				if (word1 >= $(window).scrollTop() && word1 < ($(window).scrollTop()+$(window).height())) {
+					//文字淡入
+			         $("#word1-anim").fadeIn(3000);
+					 $("#word1-anim").addClass("top2-anmi-Word");
+					 $("#word1-anim").addClass("delay-anmi");
+				     $("#word1-anim").css("bottom","0");
+				     $("#word2-anim").addClass("top1-anmi-Word");
+				     $("#word2-anim").css("bottom","0");
+			    }
+				
+		    	if (wordimg1 >= $(window).scrollTop() && wordimg1 < ($(window).scrollTop()+$(window).height())) {
+					 $("#wordimg1-anim .header_title").addClass("top2-anmi-Word");
+					 $("#wordimg1-anim .header_title").addClass("delay-anmi");
+				     $("#wordimg1-anim .header_title").css("bottom","0");
+				     $("#wordimg1-anim .content_p").addClass("top1-anmi-Word");
+				     $("#wordimg1-anim .content_p").css("bottom","0");
+				     $("#wordimg1-anim .div_leftimg").addClass("left-anmi-Word");
+				     $("#wordimg1-anim .div_leftimg").css("left","0");
+				     $("#wordimg1-anim .div_leftimg").css("opacity","1");
+			    }
 		    	
-		    }
-		
-			if (word1 >= $(window).scrollTop() && word1 < ($(window).scrollTop()+$(window).height())) {
-				/* $("#word1-anim").fadeIn(1000);*/
-				//文字淡入
-		         $("#word1-anim").fadeIn(3000);
-				 $("#word1-anim").addClass("top2-anmi-Word");
-				 $("#word1-anim").addClass("delay-anmi");
-			     $("#word1-anim").css("bottom","0");
-			     $("#word2-anim").addClass("top1-anmi-Word");
-			     $("#word2-anim").css("bottom","0");
-		    }
-		
-    	if (wordimg1 >= $(window).scrollTop() && wordimg1 < ($(window).scrollTop()+$(window).height())) {
-			 $("#wordimg1-anim .header_title").addClass("top2-anmi-Word");
-			 $("#wordimg1-anim .header_title").addClass("delay-anmi");
-		     $("#wordimg1-anim .header_title").css("bottom","0");
-		     $("#wordimg1-anim .content_p").addClass("top1-anmi-Word");
-		     $("#wordimg1-anim .content_p").css("bottom","0");
-		     $("#wordimg1-anim .div_leftimg").addClass("left-anmi-Word");
-		     $("#wordimg1-anim .div_leftimg").css("left","0");
-	    }
-    	
-    	if (wordimg3 >= $(window).scrollTop() && wordimg3 < ($(window).scrollTop()+$(window).height())) {
-			 $("#wordimg3-anim .header_title").addClass("top2-anmi-Word");
-			 $("#wordimg3-anim .header_title").addClass("delay-anmi");
-		     $("#wordimg3-anim .header_title").css("bottom","0");
-		     $("#wordimg3-anim .content_p").addClass("top1-anmi-Word");
-		     $("#wordimg3-anim .content_p").css("bottom","0");
-		     $("#wordimg3-anim .div_leftimg").addClass("left-anmi-Word");
-		     $("#wordimg3-anim .div_leftimg").css("left","0");
-	    }
-    	
-		if (wordimg2 >= $(window).scrollTop() && wordimg2 < ($(window).scrollTop()+$(window).height())) {
-			 $("#wordimg2-anim .header_title").addClass("top2-anmi-Word");
-			 $("#wordimg2-anim .header_title").addClass("delay-anmi");
-		     $("#wordimg2-anim .header_title").css("bottom","0");
-		     $("#wordimg2-anim .content_p").addClass("top1-anmi-Word");
-		     $("#wordimg2-anim .content_p").css("bottom","0");
-		     $("#wordimg2-anim .div_rightimg").addClass("right-anmi-Word");
-		     $("#wordimg2-anim .div_rightimg").css("right","0");
-	    }
-		if (wordimg3 >= $(window).scrollTop() && wordimg3 < ($(window).scrollTop()+$(window).height())) {
-			 $("#wordimg3-anim .header_title").addClass("top2-anmi-Word");
-			 $("#wordimg3-anim .header_title").addClass("delay-anmi");
-		     $("#wordimg3-anim .header_title").css("bottom","0");
-		     $("#wordimg3-anim .content_p").addClass("top1-anmi-Word");
-		     $("#wordimg3-anim .content_p").css("bottom","0");
-		     $("#wordimg3-anim .div_leftimg").addClass("left-anmi-Word");
-		     $("#wordimg3-anim .div_leftimg").css("left","0");
-	    }
-		
-		if (wordimg4 >= $(window).scrollTop() && wordimg4 < ($(window).scrollTop()+$(window).height())) {
-			 $("#wordimg4-anim .header_title").addClass("top2-anmi-Word");
-			 $("#wordimg4-anim .header_title").addClass("delay-anmi");
-		     $("#wordimg4-anim .header_title").css("bottom","0");
-		     $("#wordimg4-anim .content_p").addClass("top1-anmi-Word");
-		     $("#wordimg4-anim .content_p").css("bottom","0");
-		     $("#wordimg4-anim .div_rightimg").addClass("right-anmi-Word");
-		     $("#wordimg4-anim .div_rightimg").css("right","0");
-	    }
-		
-		if (wordpartner >= $(window).scrollTop() && wordpartner < ($(window).scrollTop()+$(window).height())) {
-			/* $("#word1-anim").fadeIn(1000);*/
-			 $("#partner-anim").addClass("largen44-anmi-Word");
-			 $("#partner-anim").addClass("delay-anmi");
-	    }
-    	
-    	if (wordfeedback >= $(window).scrollTop() && wordfeedback < ($(window).scrollTop()+$(window).height())) {
-			/* $("#word1-anim").fadeIn(1000);*/
-			 $("#feedback-anim").addClass("largen36-anmi-Word");
-			 $("#feedback-anim").addClass("delay-anmi");
-	    }
-  
-    	if (hp >= $(window).scrollTop() && hp < ($(window).scrollTop()+$(window).height())) {
-			 $("#h1-anim").addClass("top2-anmi-Word");
-			 $("#h1-anim").addClass("delay-anmi");
-		     $("#h1-anim").css("bottom","0");
-		     $("#p-anim").addClass("top1-anmi-Word");
-		     $("#p-anim").css("bottom","0");
-	    }
-    	
-    	
-    	if (hp2 >= $(window).scrollTop() && hp2 < ($(window).scrollTop()+$(window).height())) {
-			 $("#h2-anim").addClass("top2-anmi-Word");
-			 $("#h2-anim").addClass("delay-anmi");
-		     $("#h2-anim").css("bottom","0");
-		     $("#p2-anim").addClass("top1-anmi-Word");
-		     $("#p2-anim").css("bottom","0");
-	    }
-    })
-	    	
-	    	
-			
-	    	
-		})
+		    	if (wordimg3 >= $(window).scrollTop() && wordimg3 < ($(window).scrollTop()+$(window).height())) {
+					 $("#wordimg3-anim .header_title").addClass("top2-anmi-Word");
+					 $("#wordimg3-anim .header_title").addClass("delay-anmi");
+				     $("#wordimg3-anim .header_title").css("bottom","0");
+				     $("#wordimg3-anim .content_p").addClass("top1-anmi-Word");
+				     $("#wordimg3-anim .content_p").css("bottom","0");
+				     $("#wordimg3-anim .div_leftimg").addClass("left-anmi-Word");
+				     $("#wordimg3-anim .div_leftimg").css("left","0");
+				     $("#wordimg3-anim .div_leftimg").css("opacity","1");
+			    }
+		    	
+				if (wordimg2 >= $(window).scrollTop() && wordimg2 < ($(window).scrollTop()+$(window).height())) {
+					 $("#wordimg2-anim .header_title").addClass("top2-anmi-Word");
+					 $("#wordimg2-anim .header_title").addClass("delay-anmi");
+				     $("#wordimg2-anim .header_title").css("bottom","0");
+				     $("#wordimg2-anim .content_p").addClass("top1-anmi-Word");
+				     $("#wordimg2-anim .content_p").css("bottom","0");
+				     $("#wordimg2-anim .div_rightimg").addClass("right-anmi-Word");
+				     $("#wordimg2-anim .div_rightimg").css("right","0");
+				     $("#wordimg2-anim .div_rightimg").css("opacity","1");
+			    }
+				if (wordimg3 >= $(window).scrollTop() && wordimg3 < ($(window).scrollTop()+$(window).height())) {
+					 $("#wordimg3-anim .header_title").addClass("top2-anmi-Word");
+					 $("#wordimg3-anim .header_title").addClass("delay-anmi");
+				     $("#wordimg3-anim .header_title").css("bottom","0");
+				     $("#wordimg3-anim .content_p").addClass("top1-anmi-Word");
+				     $("#wordimg3-anim .content_p").css("bottom","0");
+				     $("#wordimg3-anim .div_leftimg").addClass("left-anmi-Word");
+				     $("#wordimg3-anim .div_leftimg").css("left","0");
+				     $("#wordimg3-anim .div_leftimg").css("opacity","1");
+			    }
+				
+				if (wordimg4 >= $(window).scrollTop() && wordimg4 < ($(window).scrollTop()+$(window).height())) {
+					 $("#wordimg4-anim .header_title").addClass("top2-anmi-Word");
+					 $("#wordimg4-anim .header_title").addClass("delay-anmi");
+				     $("#wordimg4-anim .header_title").css("bottom","0");
+				     $("#wordimg4-anim .content_p").addClass("top1-anmi-Word");
+				     $("#wordimg4-anim .content_p").css("bottom","0");
+				     $("#wordimg4-anim .div_rightimg").addClass("right-anmi-Word");
+				     $("#wordimg4-anim .div_rightimg").css("right","0");
+				     $("#wordimg4-anim .div_rightimg").css("opacity","1");
+			    }
+				
+				if (wordpartner >= $(window).scrollTop() && wordpartner < ($(window).scrollTop()+$(window).height())) {
+					 $("#partner-anim").addClass("largen44-anmi-Word");
+					 $("#partner-anim").addClass("delay-anmi");
+			    }
+		    	
+		    	if (wordfeedback >= $(window).scrollTop() && wordfeedback < ($(window).scrollTop()+$(window).height())) {
+					 $("#feedback-anim").addClass("largen36-anmi-Word");
+					 $("#feedback-anim").addClass("delay-anmi");
+			    }
+		  
+		    	if (hp >= $(window).scrollTop() && hp < ($(window).scrollTop()+$(window).height())) {
+					 $("#h1-anim").addClass("top2-anmi-Word");
+					 $("#h1-anim").addClass("delay-anmi");
+				     $("#h1-anim").css("bottom","0");
+				     $("#p-anim").addClass("top1-anmi-Word");
+				     $("#p-anim").css("bottom","0");
+			    }
+		    	
+		    	if (hp2 >= $(window).scrollTop() && hp2 < ($(window).scrollTop()+$(window).height())) {
+					 $("#h2-anim").addClass("top2-anmi-Word");
+					 $("#h2-anim").addClass("delay-anmi");
+				     $("#h2-anim").css("bottom","0");
+				     $("#p2-anim").addClass("top1-anmi-Word");
+				     $("#p2-anim").css("bottom","0");
+			    } 
+			})
+        })
 	</script>
 </html>
