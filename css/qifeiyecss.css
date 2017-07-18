@@ -640,8 +640,15 @@ float: left;
 	background-color: #61B0FF;
 	min-height: 800px;
 	height: auto;
-}		
-
+}	
+.div-feedback{
+	width:100%;
+	margin: 0 auto; 
+	margin-bottom: 120px;
+}	
+.div-width90{
+	width: 90% !important;
+}
 
 /*媒体查询*/		
 @media (max-width:767px ) {
@@ -656,7 +663,6 @@ float: left;
 		height: 55px;
 	}*/
 	.row{margin-top:50px;}
-	video{display:none;}
 	video{position: relative;top:55px !important;}
 	.moblie_fontsize20{font-size: 20px !important;}
 	.mobile_fontsize12{font-size: 12px !important;}
@@ -672,8 +678,12 @@ float: left;
 		background-size: 100% 100%; 
 		overflow: hidden;
 		background-image: url(../img/sing-child.jpg);
+		width: 200% !important; 
+		left:-100px !important; 
+		top:30px;
 	}
 	.div-afford{min-height: 500px !important;}
+	video{display: none;}
 }
 
 @media (min-width:767px ) {
@@ -685,7 +695,7 @@ float: left;
     	position:absolute;
     	left:0px !important;
     }
-    video{display:block;}
+    video{display: block;}
 }
 
 /*
@@ -706,11 +716,13 @@ float: left;
 }
 .div_leftimg{
    position: relative;
-   left:-1300px;
+   left:-89px;
+   opacity: 0;
 }
  .div_rightimg{
    position: relative;
-   right:-1300px;
+   right:-89px;
+   opacity: 0;
 }
 
 
@@ -745,21 +757,21 @@ float: left;
 
 /*左右动画*/
 @keyframes left-Anim{
-	from{ left: -1330px;opacity: 0;}
+	from{ left: -89px;opacity: 0;}
 	to{ left: 0px;opacity: 1;}
 }
 @-webkit-keyframes  left-Anim /* Safari 与 Chrome */
 {
-    from{ left: -1300px;opacity: 0;}
+    from{ left: -89px;opacity: 0;}
 	to{ left: 0px;opacity: 1;}
 }
 @keyframes right-Anim{
-	from{ right: -1300px;opacity: 0;}
+	from{ right: -89px;opacity: 0;}
 	to{ right: 0px;opacity: 1;}
 }
 @-webkit-keyframes  right-Anim /* Safari 与 Chrome */
 {
-    from{ right: -1300px;opacity: 0;}
+    from{ right: -89px;opacity: 0;}
 	to{ right: 0px;opacity: 1;}
 }
 .left-anmi-Word{
