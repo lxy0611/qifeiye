@@ -684,6 +684,17 @@ float: left;
 	}
 	.div-afford{min-height: 500px !important;}
 	video{display: none;}
+	.div_leftimg{
+	   position: relative;
+	   left:-30px;
+	   opacity: 0;
+	}
+	.div_rightimg{
+	   position: relative;
+	   right:-30px;
+	   opacity: 0;
+	}
+	
 }
 
 @media (min-width:767px ) {
@@ -696,6 +707,16 @@ float: left;
     	left:0px !important;
     }
     video{display: block;}
+    .div_leftimg{
+	position: relative;
+	left:-89px;
+	opacity: 0;
+     }
+     .div_rightimg{
+	position: relative;
+	right:-89px;
+	opacity: 0;
+     }
 }
 
 /*
@@ -714,16 +735,7 @@ float: left;
    position: relative;
    bottom:-30px;
 }
-.div_leftimg{
-   position: relative;
-   left:-89px;
-   opacity: 0;
-}
- .div_rightimg{
-   position: relative;
-   right:-89px;
-   opacity: 0;
-}
+
 
 
 /*上升动画*/
