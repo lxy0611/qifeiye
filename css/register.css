@@ -1,0 +1,100 @@
+body{
+	background-color:#383838;
+}
+.div-logo img{
+	width:159px;
+	height: 51px;
+	margin: 0 auto;
+}
+.div-logo{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.checkbox input{width: 16px !important; height: 16px !important;}
+.form-register button{
+	width: 100%;
+	margin-bottom:10px !important;	
+	line-height: 32px !important;
+	height: 32px;
+	font-size: 16px;
+	padding:0px;
+}
+.form-register input{
+	background-color: rgba(255,255,255,0);
+	border:1px solid #5B5B5B !important;
+}
+.form-register input:focus{border-color: white !important;}
+.div-Bigclose img{float: right;}
+.div-Bigclose{padding: 30px  50px 60px 0px;}
+.div-logo span{
+    letter-spacing: 6px;
+	line-height: 1.8;
+	color: rgb(228, 228, 228);
+	font-size: 12px;    
+	display:block;
+	margin-top: 10px;
+}
+.form-register label{
+	font-size: 15px;
+	color: rgb(204, 204, 204);
+}
+.div-otherlogin a{
+	display:inline-block;
+	width: 24px;
+	height: 24px;
+	background-image:url(../img/social_icon.png);
+}
+.div-otherlogin{
+	color: rgb(170, 170, 170);
+	font-size: 15px;
+}
+.form-register{
+	margin: 0 auto !important;
+	float: none !important;
+}
+.login_icon_wechat{background-position: 0px -48px; }
+.login_icon_qq{background-position:-48px -48px ;}
+.login_icon_google{background-position:-240px -48px; }
+.login_icon_facebook{background-position:-96px -48px; }
+.btn-register{
+	width: 52px !important;
+    height: 32px !important;
+    display: inline-block;
+}
+#btn-login{
+	width: 152px;
+    display: inline-block;
+    float: right;
+    background-color: rgba(255,255,255,0);
+	color: white;
+	font-size: 15px;
+    line-height: 32px;
+}
+.div-warn{
+	display: none;
+	height: 24px;
+}
+.warn-info{
+	height: 24px;
+	border: 1px solid white;
+	margin-top: 10px;
+	width:auto;
+	display:inline-block;
+}
+.warn-info i{
+	color:white;
+	font-size: 12px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.btn-nav-toggle>span{
+	background: white;
+}
+.div-button{
+	position:absolute;
+	z-index: 99;
+	right:0;
+	rgba(255,255,255,0);
+	display: none;
+}
