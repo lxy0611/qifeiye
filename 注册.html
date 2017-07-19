@@ -6,7 +6,7 @@
 		<title>注册用户|自助建站 - 起飞页</title>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/qifeiyecss.css" />
+		<link rel="stylesheet" href="css/qifeiye.css" />
 		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 		<script type="text/javascript" src="js/qifeiye.js" ></script>
@@ -70,13 +70,6 @@
 			.login_icon_qq{background-position:-48px -48px ;}
 			.login_icon_google{background-position:-240px -48px; }
 			.login_icon_facebook{background-position:-96px -48px; }
-			.warn_icon_pwd{
-				background-image: url(img/警告.png);
-				background-size: 100% 100%;
-				width: 14px;
-				height: 14px;
-				display: inline-block;
-			}
 			.btn-register{
 				width: 52px !important;
 			    height: 32px !important;
@@ -176,9 +169,9 @@
 		                    <div class="div-warn"><div class="warn-info"><i></i></div></div>				
 						</div>
 						<div class="form-group">
-							<label>密码&nbsp;<i class="warn_icon_pwd" title="至少8位"></i>*</label>
+							<label>密码&nbsp;<i class="glyphicon glyphicon-info-sign" title="至少8位"></i>&nbsp;*</label>
 							<input type="password" class="form-control" name="password"/>
-							  <div class="div-warn"><div class="warn-info"><i></i></div></div>				
+							<div class="div-warn"><div class="warn-info"><i></i></div></div>				
 						</div>
 						<div class="form-group">
 							<label>再次输入密码</label>
@@ -334,10 +327,10 @@
 			   })
 			
 			//问题
-			var a=Math.floor(Math.random() * 100);
-			var b=Math.floor(Math.random() * 100);
-			var quest=a+"+"+b+"等于几？";
-			var sum=a+b;
+			let a=Math.floor(Math.random() * 100);
+			let b=Math.floor(Math.random() * 100);
+			let quest=a+"+"+b+"等于几？";
+			let sum=a+b;
 			$(".label-quest").text(quest);
 			$("input[name='answer']").blur(function(){
 				    if($(this).val()===""){
